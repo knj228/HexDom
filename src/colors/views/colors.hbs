@@ -1,0 +1,45 @@
+<html>
+<form method = 'GET' action=>
+  <div class="centered">
+  <div class="group">
+    <input type="number"  id="red" name="red" min="0" max="225"><br>
+    <label id="red" for="name"></label>
+    <div id = "red" class="bar"></div>
+  </div>
+  <div class="group">
+    <input type="number"  id="green" name="green" min="0" max="225"><br>
+    <label id = "green" for="name"></label>
+    <div id = "green" class="bar"></div>
+  </div>
+  <div class="group">
+    <input type="number"  id="blue" name="blue" min="0" max="225"><br>
+    <div id = "blue" class="bar"></div>
+  </div>
+  <div class="group">
+    <input id type="number"  name="shades" min="2" max="10"><br>
+    <div class="bar"></div>
+  </div>
+      <br><br><br><input class="button" type="submit" value="Submit">
+    </form>
+  </div>
+
+  <br>
+    <div class="results">
+      <ul>
+    {{#each data}}
+    <li><div class="circle" style="background:{{this.hex}}">{{this.hex}}&nbsp;|&nbsp;{{this.name}}&nbsp;|&nbsp;({{this.r}},{{this.r}},{{this.r}})</div></li>
+    {{/each}}
+  </ul>
+  </div>
+</div>
+
+  <!-- Red Value:<br>
+  <input type="number" class = "cInput" id="red" name="red" min="0" max="225"><br>
+  <br>
+  Green Value:<br>
+  <input type="number" class = "cInput" id="green" name="green" min="0" max="225"><br>
+  Blue Value:<br>
+  <input type="number" class = "cInput" id="blue" name="blue" min="0" max="225"><br>
+  Total number of shades:<br>
+  <input type="number" class = "cInput" id="shades" name="shades" min="2" max="10"><br>
+  <br><br> -->

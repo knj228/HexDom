@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+}
+
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+
+h1{
+  color:rgba(100, 50, 255, .8);
+}
+.rainbow {
+   /* Chrome, Safari, Opera */
+  -webkit-animation: rainbow 1s infinite;
+
+  /* Internet Explorer */
+  -ms-animation: rainbow 1s infinite;
+
+  /* Standar Syntax */
+  animation: rainbow 1s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}
+}
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}
+}
+
+ul#horizontal-list {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+	}
+	ul#horizontal-list li {
+		display: inline;
+	}
+
+  .circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    line-height: 300px;
+    text-align: center;
+    background: #000
+  }
+
+
+.button {
+    background-color: #ffb3ff; /* Green */
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #ffccff;
+    color: white;
+}
+
+.btnWrap:active {
+  top: 2px;
+  box-shadow: 0 2px 0 #d9d9d8;
+}
+
+.btn:active {
+  top: 2px;
+}
+
+
+.centered {
+  width: 550px;
+  height: 400px;
+  margin: auto;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.results {
+  width: 900px;
+  height: 400px;
+  margin: auto;
+  position: relative ;
+  top: 200;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.group {
+  width: 100%;
+  height: 110px;
+  overflow: hidden;
+  position: relative;
+}
+
+label {
+  position: absolute;
+  top: 36.66667px;
+  color: rgba(255, 255, 255, 0.5);
+  font: 400 36.66667px Roboto;
+  cursor: text;
+  transition: .25s ease;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding-top: 36.66667px;
+  border: none;
+  border-radius: 0;
+  color: white;
+  background: #333;
+  text-align: center;
+  font-size: 36.66667px;
+  transition: .3s ease;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+input:valid ~ label {
+  top: 0;
+  font: 700 22px Roboto;
+  color: red;
+}
+input:focus {
+  outline: none;
+}
+/*input:focus ~ label {
+  top: 0;
+  font: 700 22px Roboto;
+  color: #2196f3;
+}*/
+
+input:focus ~ .bar:before {
+  transform: translateX(0);
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #333 inset;
+  -webkit-text-fill-color: white !important;
+}
+
+.bar {
+  background: rgba(255, 255, 255, 0.5);
+  content: '';
+  width: 550px;
+  height: 3.66667px;
+  transition: .3s ease;
+  position: relative;
+}
+.bar:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  background: pink;
+  transform: translateX(-100%);
+}
+#blue.bar:before {
+  background: #005696;
+}
+#green.bar:before {
+  background: #00a000;
+}
+#red.bar:before {
+  background: #b50000;
+}
+
+::selection {
+  background: rgba(133, 150, 243, 0.3);
+}
+
+body,h1,h2,h3,h4,h5,h6 {color: pink font-family: "Raleway", sans-serif}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+h1,h2,h3,h4,h5,h6{text-align: center;}
+
+#green{
+  color:#00a000;
+}
+#red{
+  color:#b50000;
+}
+
+#blue{
+  color:#005696;
+}
+
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #ffccff;
+}
